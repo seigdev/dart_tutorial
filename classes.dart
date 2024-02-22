@@ -55,6 +55,16 @@ class Gender extends Person {
   }
 }
 
+class Question {
+  String questionText;
+  bool questionAnswer;
+
+  Question(
+    this.questionText,
+    this.questionAnswer,
+  );
+}
+
 main() {
   /*  
   creating objects.

@@ -35,3 +35,18 @@ dynamic square(var num3) => num3 * num3;
 void showMessage(var msg) {
   print(msg);
 }
+
+// named vanilla function
+getMIlk() {
+  // statements here
+}
+// anonymous functions
+// (){}
+
+// callback function
+// onpressed: (){}
+
+// complex functions
+int getNewMilk(int money) {
+  return money - 2;
+}

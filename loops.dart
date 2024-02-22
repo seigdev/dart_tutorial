@@ -13,12 +13,12 @@ void main() {
   in the array.
   */
   var num = [1, 2, 3];
-  for (var n in num) {
-    // print(n);
-  }
+  // for (int n in num) {
+  //   print(n);
+  // }
 
   // using standard for loop
-  for (var i = 0; i < num.length; i++) {
+  for (int i = 0; i < num.length; i++) {
     // print(num[i]);
   }
 
@@ -59,13 +59,63 @@ void main() {
   continue
   
   */
-  for (var i = 1; i <= 10; ++i) {
-    if (i > 5) break;
-    // print(i);
-  }
+  // for (int i = 1; i <= 10; ++i) {
+  //   if (i > 5) break;
+  //   // print(i);
+  // }
 
-  for (var i = 0; i <= 10; i++) {
-    if (i % 2 == 0) continue;
-    print(i);
+  // for (int i = 0; i <= 10; i++) {
+  //   if (i % 2 == 0) continue;
+  //   print(i);
+  // }
+
+  // buyMilk(7);
+  // nineSong(0);
+  pieMaker();
+
+  List<int> ticket = [45, 2, 9, 18, 12, 33];
+
+  checkNumbers(ticket);
+}
+
+// loops can be used to excute blocks multiple times.
+void buyMilk(int days) {
+  for (int i = 1; i <= days; i++) {
+    print("Buying milk on day $i");
   }
+}
+
+void nineSong(int number) {
+  for (int i = 99; i > number; i--) {
+    print(
+        "$i bottles of beer on the wall, $i bottles of beer. \n Take one down and pass it around, ${i - 1} bottles of beer on the wall.");
+  }
+}
+
+// for in loop, used to loop through a list.
+List<String> fruits = [
+  'apple',
+  'pear',
+  'orange',
+  'grape',
+  'banana',
+];
+
+List<int> defaultNumbers = [12, 6, 34, 22, 41, 9];
+
+void pieMaker() {
+  // fruit represent each item in the list.
+  for (String fruit in fruits) {
+    print("$fruit pie");
+  }
+}
+
+void checkNumbers(List<int> myNumbers) {
+  List<int> matchedNumbers = [];
+  for (int num in defaultNumbers) {
+    if (myNumbers.contains(num)) {
+      matchedNumbers.add(num);
+    }
+  }
+  print(matchedNumbers.length);
 }
